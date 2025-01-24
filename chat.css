@@ -1,0 +1,181 @@
+/* General Reset */
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body {
+    background-image: url(cart/back.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Detail Section */
+.detail {
+    margin: 20px;
+    width: 100%;
+    text-align: center;
+}
+.MU- {
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    animation-name: mu;
+    animation-duration: 3s;
+}
+.nice {
+    font-size: 20px;
+}
+
+/* Animation */
+@keyframes mu {
+    from {
+        transform: translate(-250px);
+    }
+}
+span {
+    color: teal;
+    text-shadow: 2px 2px 1px black;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+    gap: 20px;
+}
+
+/* Box */
+.box {
+    border: solid 1px white;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+.box:hover {
+    transform: scale(1.05);
+}
+img {
+    border-radius: 10px;
+    height: 150px;
+    width: 150px;
+    margin-bottom: 10px;
+}
+button {
+    padding: 10px;
+    width: 80px;
+    margin-top: 10px;
+    border: none;
+    color: white;
+    background-color: rgb(180, 123, 39);
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+    box-shadow: inset -2px 2px 1px black;
+}
+button:hover {
+    color: black;
+    background-color: teal;
+    font-weight: bold;
+}
+.download {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Payment Modal */
+#buy {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgb(180, 123, 39);
+    border: solid white 1px;
+    border-radius: 10px;
+    color: black;
+    font-size: larger;
+    text-align: center;
+    margin: 20px auto;
+}
+#buy:hover {
+    background-color: teal;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: black;
+    padding: 20px 0;
+    text-align: center;
+}
+.icon {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.icon a {
+    color: white;
+    font-size: 30px;
+    transition: all 0.3s ease-in;
+}
+.icon a:hover {
+    color: rgb(180, 123, 39);
+    transform: scale(1.05);
+}
+.location{
+    text-align: center;
+    color: white;
+    margin-top: 1.5rem;
+}
+
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+    .MU- {
+        font-size: 60px;
+    }
+    .nice {
+        font-size: 30px;
+    }
+    .box {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .MU- {
+        font-size: 50px;
+    }
+    .nice {
+        font-size: 25px;
+    }
+    .box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .MU- {
+        font-size: 30px;
+    }
+    .nice {
+        font-size: 18px;
+    }
+    .box {
+        width: 100%;
+    }
+    img {
+        height: 100px;
+        width: 100px;
+    }
+    button {
+        width: 100px;
+    }
+}

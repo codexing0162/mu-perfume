@@ -1,0 +1,140 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: georgia;
+}
+body {
+    background-image: url(cart/back.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.top {
+    justify-self: center;
+    background-color: white;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: none;
+    width: 200px;
+    height: 20px;
+    padding: 5px 10px;
+}
+.logo {
+    justify-self: center;
+    animation-name: logo;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+.logo h1 {
+    color: teal;
+    font-size: large;
+    font-weight: bold;
+    text-shadow: -2px 2px 3px black;
+}
+@keyframes logo {
+    from {
+        transform: translateY(-45px);
+    }
+}
+.center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin-top: 5%;
+}
+.center .detail {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.center .detail .discover {
+    display: flex;
+    flex-direction: column;
+    font-size: 120px;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-shadow: 2px 2px 1px black;
+    margin-left: 1rem;
+}
+.little {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.little p {
+    font-size: 20px;
+    font-style: oblique;
+}
+.little button {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    margin-left: 5rem;
+    margin-top: 0.5rem;
+    padding: 10px 5px;
+    transition: all ease-in 0.5s;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+    background-color: teal;
+    animation-name: cart;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes cart {
+    from {
+        transform: translate(-200px);
+    }
+}
+
+/* Responsive styles */
+
+/* Small devices (up to 768px) */
+@media (max-width: 768px) {
+    .center {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    .center .detail .discover {
+        font-size: 60px;
+        margin-left: 0;
+        text-align: center;
+    }
+    .little {
+        margin-left: 0;
+        text-align: center;
+    }
+    .little button {
+        margin-left: 0;
+        width: 80%;
+    }
+}
+
+/* Extra small devices (up to 480px) */
+@media (max-width: 480px) {
+    .center .detail .discover {
+        font-size: 40px;
+    }
+    .little p {
+        font-size: 16px;
+    }
+    .little button {
+        width: 100%;
+        padding: 8px;
+    }
+    .top {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+    .logo h1 {
+        font-size: medium;
+    }
+}
